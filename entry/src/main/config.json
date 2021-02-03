@@ -1,0 +1,57 @@
+{
+  "app": {
+    "bundleName": "com.example.watch.test",
+    "vendor": "huawei",
+    "version": {
+      "code": 1,
+      "name": "1.0"
+    },
+    "apiVersion": {
+      "compatible": 3,
+      "target": 3
+    }
+  },
+  "deviceConfig": {
+    "default": {
+    }
+  },
+  "module": {
+    "package": "com.example.watch.test",
+    "name": ".MyApplication",
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry"
+    },
+    "deviceType": [
+      "wearable"
+    ],
+    "reqCapabilities": [
+      "video_support"
+    ],
+    "abilities": [
+      {
+        "name": "com.example.watch.test.page.PageAbility",
+        "description": "$string:mainability_description",
+        "orientation": "portrait",
+        "icon": "$media:icon",
+        "label": "$string:app_name",
+        "launchType": "standard",
+        "visible": true,
+        "permissions": [],
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "type": "page",
+        "formEnabled": false
+      }
+    ]
+  }
+}

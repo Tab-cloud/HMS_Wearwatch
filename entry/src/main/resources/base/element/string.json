@@ -1,0 +1,48 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "watch_test"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Wearable_Empty Feature Ability"
+    },
+    {
+      "name": "no_data",
+      "value": "no data"
+    },
+    {
+      "name": "wearing_watch_tips",
+      "value": "wearing_watch_tips"
+    },
+    {
+      "name": "sleep",
+      "value": "sleep"
+    },
+    {
+      "name": "hour",
+      "value": "hour"
+    },
+    {
+      "name": "double_dash",
+      "value": "--"
+    },
+    {
+      "name": "dash",
+      "value": "-"
+    },
+    {
+      "name": "minute",
+      "value": "minute"
+    },
+    {
+      "name": "goal",
+      "value": "goal"
+    },
+    {
+      "name": "target_sleep_time",
+      "value": "target_sleep_time"
+    }
+  ]
+}

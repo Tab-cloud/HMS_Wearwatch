@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_watch_test2" default="compile.module.watch_test2">
+  <dirname property="module.watch_test2.basedir" file="${ant.file.module_watch_test2}"/>
+  
+  <property name="module.jdk.home.watch_test2" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.watch_test2" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.watch_test2" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.watch_test2" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="watch_test2.output.dir" value="${module.watch_test2.basedir}/build/classes/java/main"/>
+  <property name="watch_test2.testoutput.dir" value="${module.watch_test2.basedir}/build/classes/java/test"/>
+  
+  <path id="watch_test2.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="watch_test2.module.production.classpath">
+    <path refid="${module.jdk.classpath.watch_test2}"/>
+  </path>
+  
+  <path id="watch_test2.runtime.production.module.classpath">
+    <pathelement location="${watch_test2.output.dir}"/>
+  </path>
+  
+  <path id="watch_test2.module.classpath">
+    <path refid="${module.jdk.classpath.watch_test2}"/>
+    <pathelement location="${watch_test2.output.dir}"/>
+  </path>
+  
+  <path id="watch_test2.runtime.module.classpath">
+    <pathelement location="${watch_test2.testoutput.dir}"/>
+    <pathelement location="${watch_test2.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.watch_test2">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.watch_test2">
+    <patternset refid="excluded.from.module.watch_test2"/>
+  </patternset>
+  
+  
+  <target name="compile.module.watch_test2" depends="compile.module.watch_test2.production,compile.module.watch_test2.tests" description="Compile module watch_test2"/>
+  
+  <target name="compile.module.watch_test2.production" depends="register.custom.compilers" description="Compile module watch_test2; production classes"/>
+  
+  <target name="compile.module.watch_test2.tests" depends="register.custom.compilers,compile.module.watch_test2.production" description="compile module watch_test2; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.watch_test2" description="cleanup module">
+    <delete dir="${watch_test2.output.dir}"/>
+    <delete dir="${watch_test2.testoutput.dir}"/>
+  </target>
+</project>
